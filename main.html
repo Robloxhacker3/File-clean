@@ -1,0 +1,15 @@
+<input type="file" id="fileInput" />
+<button id="deleteButton">Delete Selected File</button>
+<script>
+    document.getElementById('deleteButton').addEventListener('click', function() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        
+        if (file) {
+            alert(`You cannot delete the file directly in the browser, but you selected: ${file.name}`);
+            // Simulate the deletion (not really deleting, as browsers prevent it)
+        } else {
+            alert("Please select a file first.");
+        }
+    });
+</script>
